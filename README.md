@@ -1,9 +1,9 @@
 # Table of Content
-- [About](https://github.com/scotoglu/hadila-app/new/master?readme=1#about)
-- [Screenshots](https://github.com/scotoglu/hadila-app/new/master?readme=1#screenshots)
-- [Features](https://github.com/scotoglu/hadila-app/new/master?readme=1#features)
-- [Library and Tools](https://github.com/scotoglu/hadila-app/new/master?readme=1#library-and-tools)
-- [Architecture](https://github.com/scotoglu/hadila-app/new/master?readme=1#architecture)
+- [About](https://github.com/scotoglu/hadila-app#about)
+- [Screenshots](https://github.com/scotoglu/hadila-app#screenshots)
+- [Features](https://github.com/scotoglu/hadila-app#features)
+- [Library and Tools](https://github.com/scotoglu/hadila-app#library-and-tools)
+- [Architecture](https://github.com/scotoglu/hadila-app#architecture)
 
 ## About
 I developed the Hadila app to save  frequently faced problems that I can't remember exact solutions when coding android application.
