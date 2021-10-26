@@ -1,9 +1,9 @@
 # Table of Content
-- [About](https://github.com/scotoglu/hadila-app/new/master?readme=1#about)
-- [Screenshots](https://github.com/scotoglu/hadila-app/new/master?readme=1#screenshots)
-- [Features](https://github.com/scotoglu/hadila-app/new/master?readme=1#features)
-- [Library and Tools](https://github.com/scotoglu/hadila-app/new/master?readme=1#library-and-tools)
-- [Architecture](https://github.com/scotoglu/hadila-app/new/master?readme=1#architecture)
+- [About](https://github.com/scotoglu/hadila-app#about)
+- [Screenshots](https://github.com/scotoglu/hadila-app#screenshots)
+- [Features](https://github.com/scotoglu/hadila-app#features)
+- [Library and Tools](https://github.com/scotoglu/hadila-app#library-and-tools)
+- [Architecture](https://github.com/scotoglu/hadila-app#architecture)
 
 ## About
 I developed the Hadila app to save  frequently faced problems that I can't remember exact solutions when coding android application.
@@ -13,6 +13,13 @@ I have spent a lot of time when searching below libraries and tools and learnt a
 Some of them I used  for the first time. I will continue to develop on this app because it kind of roadmap to me.  
 
 ## Screenshots
+<p float="left">
+  <img src="images/home.png" width="150" />
+  <img src="images/add.png" width="150" /> 
+  <img src="images/list.png" width="150" />
+  <img src="images/collections.png" width="150" />  
+  <img src="images/profile.png" width="150" />
+</p>
 
 ## Features
 - Saving problems with solutions
