@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.scoto.hadila.ui.splash.SplashFragment"
+        android:label=""
+        tools:layout="@layout/fragment_splash" >
+        <action
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right"
+            android:id="@+id/action_splashFragment_to_login_graph"
+            app:destination="@id/login_graph"
+            app:popUpTo="@id/login_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_main_graph"
+            app:destination="@id/main_graph"
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right"
+            app:popUpTo="@id/main_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <include app:graph="@navigation/main_graph" />
+    <include app:graph="@navigation/login_graph" />
+</navigation>

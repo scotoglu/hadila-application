@@ -1,0 +1,120 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="problem"
+            type="com.scoto.hadila.data.model.Problem" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/CustomCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--                <LinearLayout-->
+
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:gravity="end"-->
+                <!--                    android:orientation="horizontal">-->
+                <!--                    &lt;!&ndash;                        customDateTxt="@{problem.timestamp}"&ndash;&gt;-->
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/txt_date"-->
+
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_gravity="end"-->
+                <!--                        android:background="@color/beauty_bush"-->
+                <!--                        android:hint="29/08/2021"-->
+                <!--                        android:padding="3dp" />-->
+                <!--                </LinearLayout>-->
+
+                <TextView
+                    style="@style/CustomTextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Lorem Ipsum is simply dummy text of "
+                    android:text="@{problem.PTitle}" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+
+                <TextView
+                    style="@style/CustomTextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Lorem Ipsum is simply dummy text of the printing and type setting Lorem Ipsum is simply  "
+                    android:text="@{problem.PBody}" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_tag_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_margin="2dp"-->
+                <!--                    android:background="@drawable/item_problem_bg_bottom_item"-->
+                <!--                    android:text="android" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_margin="2dp"-->
+                <!--                    android:background="@drawable/item_problem_bg_bottom_item"-->
+                <!--                    android:text="android" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_margin="2dp"-->
+                <!--                    android:background="@drawable/item_problem_bg_bottom_item"-->
+                <!--                    android:text="android" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_margin="2dp"-->
+                <!--                    android:background="@drawable/item_problem_bg_bottom_item"-->
+                <!--                    android:text="android" />-->
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

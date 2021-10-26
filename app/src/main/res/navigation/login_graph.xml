@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/login_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.scoto.hadila.ui.login.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right"
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right"
+            android:id="@+id/action_loginFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+        <action
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right"
+            android:id="@+id/action_loginFragment_to_main_graph"
+            app:destination="@id/main_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.scoto.hadila.ui.login.register.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right"
+            android:id="@+id/action_registerFragment_to_main_graph"
+            app:destination="@id/main_graph"
+            app:popUpTo="@id/main_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.scoto.hadila.ui.login.reset_password.ResetPasswordFragment"
+        android:label="ResetPasswordFragment" />
+    <include app:graph="@navigation/main_graph" />
+</navigation>

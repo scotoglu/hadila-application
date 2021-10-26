@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeScreen"
+            android:icon="@drawable/ic_outline_home_32"
+            android:title="Home" />
+        <item
+            android:id="@+id/problems"
+            android:title="Problems" />
+<!--        <item-->
+<!--            android:id="@+id/solutions"-->
+<!--            android:icon="@mipmap/solution"-->
+<!--            android:title="Solutions" />-->
+    </group>
+
+
+<!--    <item android:title="Category">-->
+<!--        <menu>-->
+<!--            <group android:checkableBehavior="single">-->
+<!--                <item-->
+<!--                    android:id="@+id/addCategory"-->
+<!--                    android:icon="@drawable/ic_baseline_add_32"-->
+<!--                    android:title="Add" />-->
+<!--                <item-->
+<!--                    android:id="@+id/editCategory"-->
+<!--                    android:icon="@drawable/ic_baseline_edit_32"-->
+<!--                    android:title="Edit" />-->
+<!--            </group>-->
+<!--        </menu>-->
+<!--    </item>-->
+
+    <item android:title="User">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/profile"
+                    android:icon="@drawable/ic_outline_account_box_24"
+                    android:title="Profile" />
+<!--                <item-->
+<!--                    android:id="@+id/statistics"-->
+<!--                    android:icon="@mipmap/pie_chart"-->
+<!--                    android:title="Statistics" />-->
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

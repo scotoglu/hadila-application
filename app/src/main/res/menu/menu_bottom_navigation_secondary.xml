@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <item-->
+<!--        android:id="@+id/homeFragment"-->
+<!--        android:icon="@drawable/ic_home"-->
+<!--        android:title="@string/bottom_text_home" />-->
+    <item
+        app:showAsAction="never"
+        android:id="@+id/categoriesFragment"
+        android:icon="@drawable/ic_outline_folder"
+        android:title="@string/bottom_text_categories" />
+    <item
+        app:showAsAction="never"
+        android:id="@+id/collectionsFragment"
+        android:icon="@drawable/ic_folder_tree"
+        android:title="@string/bottom_text_collections" />
+
+    <item
+        app:showAsAction="never"
+        android:id="@+id/problemsListingFragment"
+        android:icon="@drawable/ic_list"
+        android:title="@string/bottom_text_list" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_outline_person"
+        android:title="@string/bottom_text_profile"
+        app:showAsAction="ifRoom" />
+</menu>

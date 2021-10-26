@@ -1,0 +1,31 @@
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog">
+
+        <EditText
+            android:id="@+id/et_collection"
+            style="@style/CustomTextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:gravity="top|start"
+            android:hint="Title"
+            android:padding="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_collection"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Add" />
+    </RelativeLayout>
+</layout>

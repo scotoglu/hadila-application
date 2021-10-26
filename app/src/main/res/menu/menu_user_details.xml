@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu_more"
+        android:checkableBehavior="single"
+        android:enabled="true">
+        <item
+            android:id="@+id/more_settings"
+            android:icon="@drawable/ic__settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/more_about"
+            android:title="About" />
+        <item
+            android:id="@+id/more_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+    </group>
+</menu>

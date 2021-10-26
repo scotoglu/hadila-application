@@ -1,0 +1,248 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="10dp"
+            app:layoutDescription="@xml/fragment_add_problems_xml_constraintlayout_scene">
+
+
+            <EditText
+                android:id="@+id/et_problem_title"
+                style="@style/CustomTextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_details_text"
+                android:hint="Problem Title"
+                android:padding="8dp"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_problem_explanation"
+                style="@style/CustomTextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_details_text"
+                android:hint="Problem Explanation"
+                android:maxLines="2"
+                android:padding="8dp"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/et_problem_title" />
+
+            <ScrollView
+                android:id="@+id/scrollview_solution"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_details_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_problem_explanation">
+
+                <EditText
+                    android:id="@+id/et_problem_solution"
+                    style="@style/CustomTextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top|start"
+                    android:hint="Problem Solution"
+                    android:imeOptions=""
+                    android:inputType="textMultiLine|textAutoCorrect"
+                    android:maxLines="20"
+                    android:padding="8dp"
+                    android:textAlignment="textStart"
+                    android:textSize="18sp" />
+            </ScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal_scrollview_chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/scrollview_solution">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/category_chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true"
+                    app:singleSelection="true" />
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_tags_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_scrollview_chipGroup">
+
+                <EditText
+                    android:id="@+id/et_tag_text"
+                    style="@style/CustomTextViewTitle"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_details_text"
+                    android:gravity="top|start"
+                    android:hint="Category"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_chip"
+                    style="@style/CustomTextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Add"
+                    app:cornerRadius="10dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_additional_resources_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/relative_layout_tags_add">
+
+                <TextView
+                    android:id="@+id/tv_additional_resources"
+                    style="@style/CustomTextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Additional resources" />
+
+                <ImageView
+                    android:id="@+id/iv_open_close_resources"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:background="?attr/dividerHorizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relative_layout_additional_resources_divider" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_additional_resources_box"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_details_date"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                app:layout_constraintTop_toBottomOf="@+id/divider2"
+                tools:layout_editor_absoluteX="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_add_link"
+                        style="@style/CustomTextViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:text="Link (0)"
+                        app:drawableBottomCompat="@drawable/ic_baseline_add_24" />
+
+
+                    <ScrollView
+                        android:id="@+id/scrollview_link_resources"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_slate_blue">
+
+                        <LinearLayout
+                            android:id="@+id/linear_layout_link_resources"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical" />
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_add_video"
+                        style="@style/CustomTextViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Video (0)"
+                        app:drawableBottomCompat="@drawable/ic_baseline_add_24" />
+
+                    <ScrollView
+                        android:id="@+id/scrollview_video_resources"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/beauty_bush">
+
+                        <LinearLayout
+                            android:id="@+id/linear_layout_video_resources"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical" />
+                    </ScrollView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--        <com.google.android.material.button.MaterialButton-->
+            <!--            android:id="@+id/btn_save"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginTop="8dp"-->
+            <!--            android:fontFamily="@font/roboto_mono_light"-->
+            <!--            android:text="Save"-->
+            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/linear_layout_additional_resources_box" />-->
+
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+    </ScrollView>
+</layout>

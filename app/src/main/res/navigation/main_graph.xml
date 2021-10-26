@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.scoto.hadila.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_problemDetailsFragment"
+            app:destination="@id/problemDetailsFragment"
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment"
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_collectionsFragment"
+            app:destination="@id/collectionsFragment"
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_problemsListingFragment"
+            app:destination="@id/problemsListingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addProblemFragment"
+            app:destination="@id/addProblemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/problemDetailsFragment"
+        android:name="com.scoto.hadila.ui.problem.details.ProblemDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_problem_details">
+        <argument
+            android:name="PROBLEM"
+            app:argType="com.scoto.hadila.data.model.Problem" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProblemFragment"
+        android:name="com.scoto.hadila.ui.problem.add_problem.AddProblemFragment"
+        android:label="Add Problem"
+        tools:layout="@layout/fragment_add_problem" />
+    <fragment
+        android:id="@+id/problemsListingFragment"
+        android:name="com.scoto.hadila.ui.problem.problem_listing.ProblemsListingFragment"
+        android:label="{TITLE}"
+        tools:layout="@layout/fragment_problems_listing">
+        <action
+            android:id="@+id/action_problemsListingFragment_to_problemDetailsFragment"
+            app:destination="@id/problemDetailsFragment"
+            app:enterAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_right" />
+        <argument
+            android:name="LIST_TYPE"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="TITLE"
+            app:argType="string"
+            android:defaultValue="Problems" />
+        <argument
+            android:name="BYCOLLECTION"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="BYCATEGORY"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.scoto.hadila.ui.categories.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_problemsListingFragment"
+            app:destination="@id/problemsListingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.scoto.hadila.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/collectionsFragment"
+        android:name="com.scoto.hadila.ui.collections.CollectionsFragment"
+        android:label="Collections"
+        tools:layout="@layout/fragment_collections" >
+        <action
+            android:id="@+id/action_collectionsFragment_to_problemsListingFragment"
+            app:destination="@id/problemsListingFragment" />
+    </fragment>
+</navigation>
